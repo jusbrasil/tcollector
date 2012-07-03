@@ -72,7 +72,7 @@ def cluster_state(server):
 
 
 def node_stats(server):
-  return request(server, "/_cluster/nodes/_local/stats")
+  return request(server, "/_cluster/nodes/_local/stats?all=true")
 
 
 def main(argv):
