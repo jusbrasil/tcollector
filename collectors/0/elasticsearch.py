@@ -129,8 +129,8 @@ def main(argv):
 
     ts = nstats["os"]["timestamp"] / 1000  # ms -> s
     indices = nstats["indices"]
-    printmetric("indices.size", indices["size_in_bytes"])
-    printmetric("num_docs", indices["docs"]["num_docs"])
+    printmetric("indices.size", indices["store"]["size_in_bytes"])
+    printmetric("num_docs", indices["docs"]["count"])
     d = indices["cache"]
     printmetric("cache.field.evictions", d["field_evictions"])
     printmetric("cache.field.size", d["field_size_in_bytes"])
