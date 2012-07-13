@@ -176,9 +176,9 @@ def main(argv):
                   d["collection_time_in_millis"] / 1000., gc=gc)
     del jvm
     del d
-    for stat, value in nstats["network"]["tcp"].iteritems():
-      if is_numeric(value):
-        printmetric("network.tcp." + stat, value)
+#    for stat, value in nstats["network"]["tcp"].iteritems():
+#      if is_numeric(value):
+#        printmetric("network.tcp." + stat, value)
     for stat, value in nstats["transport"].iteritems():
       if is_numeric(value):
         printmetric("transport." + stat, value)
