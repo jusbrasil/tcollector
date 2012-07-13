@@ -151,14 +151,14 @@ def main(argv):
         open_fds = open_fds["total"]
     if open_fds is not None:
       printmetric("process.open_file_descriptors", open_fds)
-    d = process["cpu"]
-    printmetric("process.cpu.percent", d["percent"])
-    printmetric("process.cpu.sys", d["sys_in_millis"] / 1000.)
-    printmetric("process.cpu.user", d["user_in_millis"] / 1000.)
-    d = process["mem"]
-    printmetric("process.mem.resident", d["resident_in_bytes"])
-    printmetric("process.mem.shared", d["share_in_bytes"])
-    printmetric("process.mem.total_virtual", d["total_virtual_in_bytes"])
+#    d = process["cpu"]
+#    printmetric("process.cpu.percent", d["percent"])
+#    printmetric("process.cpu.sys", d["sys_in_millis"] / 1000.)
+#    printmetric("process.cpu.user", d["user_in_millis"] / 1000.)
+#    d = process["mem"]
+#    printmetric("process.mem.resident", d["resident_in_bytes"])
+#    printmetric("process.mem.shared", d["share_in_bytes"])
+#    printmetric("process.mem.total_virtual", d["total_virtual_in_bytes"])
     del process
     jvm = nstats["jvm"]
     ts = jvm["timestamp"] / 1000  # ms -> s
